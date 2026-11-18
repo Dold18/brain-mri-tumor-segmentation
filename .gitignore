@@ -1,0 +1,18 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.DS_Store
+# Patient scans and derived data: NEVER commit these.
+data/
+cache/
+checkpoints/
+outputs/
+runs/
+*.nii
+*.nii.gz
+*.pth
+*.pt

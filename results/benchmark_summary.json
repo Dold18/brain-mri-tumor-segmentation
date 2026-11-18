@@ -1,0 +1,35 @@
+{
+  "task": "Binary whole-tumor-associated-region segmentation (includes edema)",
+  "data_source": "Medical Segmentation Decathlon Task01_BrainTumour",
+  "evaluation_type": "Internal held-out subset of labeled dataset; not official MSD challenge test",
+  "patient_counts": {
+    "train": 338,
+    "validation": 73,
+    "test": 73
+  },
+  "checkpoint_epoch": 24,
+  "threshold": 0.5,
+  "checkpoint_sha256": "de19d735e98f610856151fe08ef8669f083649e100cce771be3c01d70ad8cf44",
+  "split_hash": "d9cadeb0e1d8d5415fe91356250939238c559f92d145198085cdb60a564d351d",
+  "validation": {
+    "mean_dice": 0.8740404096589525,
+    "mean_iou": 0.7889732063771366,
+    "mean_recall": 0.8800285164254831,
+    "mean_precision": 0.8863481356769336,
+    "patients": 73
+  },
+  "heldout_test": {
+    "mean_dice": 0.8855699862259567,
+    "mean_iou": 0.8014096580797134,
+    "mean_recall": 0.8980154688487912,
+    "mean_precision": 0.8816652696892634,
+    "patients": 73
+  },
+  "patient_test_dice_median": 0.9120854011863307,
+  "test_patients_dice_ge_0_90": 39,
+  "test_patients_dice_ge_0_80": 66,
+  "test_patients_dice_lt_0_70": 2,
+  "original_artifact_integrity": "passed",
+  "clinical_validation": false,
+  "external_site_validation": false
+}

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "audited_at_utc": "2026-11-18T01:02:35.672741+00:00",
+  "scope": "Artifact consistency only; no medical predictions were recomputed",
+  "checkpoint_epoch": 24,
+  "decision_threshold": 0.5,
+  "patient_counts": {
+    "train": 338,
+    "validation": 73,
+    "test": 73
+  },
+  "split_hash": "d9cadeb0e1d8d5415fe91356250939238c559f92d145198085cdb60a564d351d",
+  "sha256": {
+    "checkpoint": "de19d735e98f610856151fe08ef8669f083649e100cce771be3c01d70ad8cf44",
+    "config": "b71cfb362bc32b8244ec2dbfecb766b45dcbf7b0ced5cf8e75dfed72e1162829",
+    "split_manifest": "ca9ecc4fcaddb2f2a8239a7114be871b2d0638aff24b270f32e0337fc9832f03",
+    "validation_report": "40a1a4b19c9f7a444015282a238c46eaa3ac3564bdb9f6f95c606317f0092d9d",
+    "test_report": "c0a3f6bf37dbaf85aebe94e5e4cd967abece4e35159ee5b9e27be57a53629ee5",
+    "validation_csv": "3b20e0e008930db6462b9f3879c25468fdf03418ab51b6c673f640d40439c77e",
+    "test_csv": "8a00e8660508a798f59513cc449eff63359674d53e6038965a885b27da339b33"
+  },
+  "metrics": {
+    "validation": {
+      "mean_dice": 0.8740404096589525,
+      "mean_iou": 0.7889732063771366,
+      "mean_recall": 0.8800285164254831,
+      "mean_precision": 0.8863481356769336,
+      "patients": 73
+    },
+    "test": {
+      "mean_dice": 0.8855699862259567,
+      "mean_iou": 0.8014096580797134,
+      "mean_recall": 0.8980154688487912,
+      "mean_precision": 0.8816652696892634,
+      "patients": 73
+    }
+  },
+  "warning": "This verifies artifacts, not clinical safety or external generalization."
+}

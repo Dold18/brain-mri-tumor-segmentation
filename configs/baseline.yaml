@@ -1,0 +1,25 @@
+project: brain_mri
+seed: 2026
+dataset:
+  name: MSD_Task01_BrainTumour
+  modalities: 4
+  target: binary_whole_tumor_region
+preprocessing:
+  clip_low_percentile: 0.5
+  clip_high_percentile: 99.5
+model:
+  name: UNet2D
+  base_channels: 16
+training:
+  epochs: 30
+  batch_size: 4
+  samples_per_epoch: 2048
+  positive_fraction: 0.7
+  validation_every: 2
+  patience_checks: 8
+  num_workers: 0
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  threshold: 0.5
+  optimizer: AdamW
+  loss: DiceBCELoss

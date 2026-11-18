@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use the software, please cite this repository and the Medical Segmentation Decathlon dataset."
+title: "Brain MRI Tumor Segmentation"
+type: software
+authors:
+  - family-names: Dold
+    given-names: Jacob
+license: MIT
+version: 1.0.0
+keywords:
+  - brain MRI
+  - tumor segmentation
+  - PyTorch
+  - U-Net

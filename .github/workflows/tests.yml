@@ -1,0 +1,29 @@
+name: Python tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install CPU PyTorch and package dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev,app]'
+      - name: Check syntax
+        run: python -m compileall -q brain_mri scripts app tests
+      - name: Run unit and integration tests (synthetic fixtures)
+        run: python -m pytest -q
+      - name: Run CPU smoke test
+        run: python -m scripts.smoke_test
+      - name: Check tracked files for data and checkpoint leaks
+        run: python -m scripts.release_preflight

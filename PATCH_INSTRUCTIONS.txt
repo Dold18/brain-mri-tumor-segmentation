@@ -1,0 +1,17 @@
+Brain MRI public release attribution patch
+
+Download and extract this ZIP into the EXISTING project root.
+It adds MIT LICENSE, CITATION.cff, split-manifest exporter/tests, and
+publication documentation; it updates README and model-card attribution.
+It does not modify the network, trained weights, dataset, or evaluation data.
+
+Commands on macOS:
+  cd /Users/jdold/Desktop/brain-mri-tumor-segmentation
+  unzip -o ~/Downloads/brain-mri-release-attribution-patch.zip -d .
+  source .venv/bin/activate
+  python -m pytest -q
+  python -m scripts.audit_release
+  python -m scripts.export_split_manifest
+  python -m scripts.release_preflight    # run only after git init/git add
+
+See docs/RELEASE_PREPARATION.md for the exact publication process.

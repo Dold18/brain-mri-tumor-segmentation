@@ -1,0 +1,23 @@
+Brain MRI Tumor Segmentation — Additive validation threshold sweep patch
+
+Archive contents:
+  scripts/validation_threshold_sweep.py
+  tests/test_validation_threshold_sweep.py
+
+1. Extract this ZIP into /Users/jdold/Desktop/brain-mri-tumor-segmentation.
+   It adds two files without replacing any existing files.
+2. Activate your existing .venv and run:
+
+    python -m pytest -q tests/test_validation_threshold_sweep.py
+
+3. Run this validation-only inference analysis:
+
+    python -m scripts.validation_threshold_sweep --device auto --batch-size 4
+
+4. Inspect output:
+
+    open '/Volumes/Storage/brain-mri-tumor-segmentation/runs/baseline/threshold_review'
+
+This uses all 73 validation patients, does not access test patients, does not
+retrain or modify best.pt, and does not overwrite existing reports.
+If rerunning, supply --output-dir with a new empty directory.
