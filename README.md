@@ -137,7 +137,7 @@ The original MRI dataset, large caches, checkpoint weights and training run dire
 de19d735e98f610856151fe08ef8669f083649e100cce771be3c01d70ad8cf44
 ```
 
-The fingerprint verifies identity, **not** model safety. Public model-weight distribution is not yet configured; other users can train from source. The release audit passed on the original Mac and checked local files, split integrity, and agreement between the patient-level and aggregate reports, without recomputing the neural network predictions.
+The fingerprint verifies identity, **not** model safety. Public model-weight distribution is configured (see best.pt); other users can train from source. The release audit passed on the original Mac and checked local files, split integrity, and agreement between the patient-level and aggregate reports, without recomputing the neural network predictions.
 
 ## Dataset citation, licensing, and limitations
 
